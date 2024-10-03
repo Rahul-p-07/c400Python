@@ -1,6 +1,5 @@
 import requests
-taxizone=requests.get("https://d37ci6vzurychx.cloudfront.net/misc/taxi_zone_lookup.csv",)
-#print(taxizone.text)
+taxizone=requests.get("https://d37ci6vzurychx.cloudfront.net/misc/taxi_zone_lookup.csv")
 records=taxizone.text
 rec=records.split("\n")[1:266]
 file= open("taxi_zone_lookup.txt","w")
